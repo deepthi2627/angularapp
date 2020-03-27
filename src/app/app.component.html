@@ -1,0 +1,29 @@
+Please select the file you want to upload: 
+<input type="file" name="files" class="form-control" 
+                     #uploads  (change)="onChange(uploads.files)" multiple
+                     value="process"/>
+<div>
+<div class="spacing">
+        Issue Count:    <input type="text" [(ngModel)]="issueCounter" (input)="search()"/>
+    </div>
+  <table border="">
+    <thead>
+        <tr>
+            <td> First Name</td>
+            <td> Sur Name</td>
+            <td> Issue count</td>
+            <td> Date of Birth </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let record of dataListnew">
+            <td> {{record.FirstName}} </td>
+             <td> {{record.SurName}} </td>
+              <td> {{record.Issuecount}} </td>
+            <td> {{record.Dateofbirth}} </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
